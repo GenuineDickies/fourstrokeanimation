@@ -45,12 +45,22 @@ h1 {
     justify-content: center;
 }
 
-.info-panel {
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
     width: 280px;
     flex-shrink: 0;
+}
+
+.info-panel {
+    width: 100%;
     margin-top: 0;
-    position: relative;
-    min-height: 320px;
+    padding: 20px;
+    background: #f5f7fa;
+    border-radius: 14px;
+    border-left: 4px solid #667eea;
 }
 
 .canvas-wrapper {
@@ -128,15 +138,6 @@ button:active {
     min-width: 45px;
 }
 
-
-.info-panel {
-    padding: 20px;
-    padding-bottom: 120px;
-    background: #f5f7fa;
-    border-radius: 14px;
-    border-left: 4px solid #667eea;
-}
-
 .stroke-meta {
     display: flex;
     flex-direction: column;
@@ -144,10 +145,7 @@ button:active {
 }
 
 .toggle-container {
-    position: absolute;
-    left: 20px;
-    right: 20px;
-    bottom: 20px;
+    width: 100%;
 }
 
 .info-panel h2 {
@@ -287,6 +285,7 @@ button:active {
     .main-layout {
         flex-direction: column;
     }
+    .left-column,
     .info-panel {
         width: 100%;
     }

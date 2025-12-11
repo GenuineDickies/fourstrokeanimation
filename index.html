@@ -10,14 +10,16 @@
     <div class="container">
         <h1>Internal Combustion Engine - Four-Stroke Cycle</h1>
         <div class="main-layout">
-            <aside class="info-panel">
-                <div class="stroke-meta">
-                    <h2>Current Stroke: <span id="currentStroke">Intake</span></h2>
-                    <div class="stroke-details">
-                        <h3>Stroke Information:</h3>
-                        <p id="strokeInfo">Air-fuel mixture enters through the intake valve as the piston moves down.</p>
+            <div class="left-column">
+                <aside class="info-panel">
+                    <div class="stroke-meta">
+                        <h2>Current Stroke: <span id="currentStroke">Intake</span></h2>
+                        <div class="stroke-details">
+                            <h3>Stroke Information:</h3>
+                            <p id="strokeInfo">Air-fuel mixture enters through the intake valve as the piston moves down.</p>
+                        </div>
                     </div>
-                </div>
+                </aside>
                 <div class="toggle-container">
                     <div class="playback-toggle" aria-label="Auto pause control">
                         <span class="toggle-label toggle-left">
@@ -34,7 +36,7 @@
                         </span>
                     </div>
                 </div>
-            </aside>
+            </div>
             <div class="canvas-wrapper">
                 <canvas id="engineCanvas" width="800" height="600"></canvas>
             </div>

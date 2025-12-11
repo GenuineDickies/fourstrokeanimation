@@ -166,22 +166,34 @@ button:active {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 14px;
-    padding: 12px 14px;
+    gap: 16px;
+    padding: 12px 16px;
     background: #eef1f7;
     border-radius: 12px;
     border: 1px solid #d6dbea;
+    width: 100%;
+    flex-wrap: wrap;
 }
 
 .toggle-label {
-    font-weight: 700;
+    font-weight: 600;
     font-size: 13px;
-    color: #4a4f5c;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+    color: #454a55;
+    letter-spacing: 0.02em;
+}
+
+.toggle-label.toggle-left {
+    text-align: right;
+    flex: 1 1 40%;
+}
+
+.toggle-label.toggle-right {
+    text-align: left;
+    flex: 1 1 40%;
 }
 
 .toggle-switch {
+    flex: 0 0 auto;
     position: relative;
     width: 64px;
     height: 32px;
@@ -227,6 +239,18 @@ button:active {
 
 .info-panel ul {
     margin-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .playback-toggle {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .toggle-label {
+        text-align: center;
+        width: 100%;
+    }
 }
 
 @media (max-width: 768px) {

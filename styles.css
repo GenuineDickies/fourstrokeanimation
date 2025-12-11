@@ -180,16 +180,22 @@ button:active {
     font-size: 13px;
     color: #454a55;
     letter-spacing: 0.02em;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    line-height: 1;
 }
 
 .toggle-label.toggle-left {
     text-align: right;
     flex: 1 1 40%;
+    align-items: flex-end;
 }
 
 .toggle-label.toggle-right {
     text-align: left;
     flex: 1 1 40%;
+    align-items: flex-start;
 }
 
 .toggle-switch {

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internal Combustion Engine Animation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Internal Combustion Engine - Four-Stroke Cycle</h1>
+        <div class="main-layout">
+            <aside class="info-panel">
+                <h2>Current Stroke: <span id="currentStroke">Intake</span></h2>
+                <div class="stroke-details">
+                    <h3>Stroke Information:</h3>
+                    <p id="strokeInfo">Air-fuel mixture enters through the intake valve as the piston moves down.</p>
+                </div>
+            </aside>
+            <div class="canvas-wrapper">
+                <canvas id="engineCanvas" width="800" height="600"></canvas>
+            </div>
+        </div>
+        <div class="controls">
+            <select id="autoPauseSelect">
+                <option value="on" selected>Auto-Pause On</option>
+                <option value="off">Auto-Pause Off</option>
+            </select>
+            <button id="resumeBtn" style="display: none;">Resume</button>
+            <button id="resetBtn">Reset</button>
+            <div class="speed-control">
+                <label for="speedSlider">Speed:</label>
+                <input type="range" id="speedSlider" min="0.5" max="3" step="0.1" value="1">
+                <span id="speedValue">1.0x</span>
+            </div>
+        </div>
+    </div>
+    <script src="engine.js"></script>
+</body>
+</html>

@@ -11,24 +11,28 @@
         <h1>Internal Combustion Engine - Four-Stroke Cycle</h1>
         <div class="main-layout">
             <aside class="info-panel">
-                <h2>Current Stroke: <span id="currentStroke">Intake</span></h2>
-                <div class="stroke-details">
-                    <h3>Stroke Information:</h3>
-                    <p id="strokeInfo">Air-fuel mixture enters through the intake valve as the piston moves down.</p>
+                <div class="stroke-meta">
+                    <h2>Current Stroke: <span id="currentStroke">Intake</span></h2>
+                    <div class="stroke-details">
+                        <h3>Stroke Information:</h3>
+                        <p id="strokeInfo">Air-fuel mixture enters through the intake valve as the piston moves down.</p>
+                    </div>
                 </div>
-                <div class="playback-toggle" aria-label="Auto pause control">
-                    <span class="toggle-label toggle-left">
-                        <span>Auto</span>
-                        <span>Pause</span>
-                    </span>
-                    <label class="toggle-switch">
-                        <input type="checkbox" id="autoPauseToggle">
-                        <span class="toggle-slider"></span>
-                    </label>
-                    <span class="toggle-label toggle-right">
-                        <span>Continuous</span>
-                        <span>Play</span>
-                    </span>
+                <div class="toggle-container">
+                    <div class="playback-toggle" aria-label="Auto pause control">
+                        <span class="toggle-label toggle-left">
+                            <span>Auto</span>
+                            <span>Pause</span>
+                        </span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="autoPauseToggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <span class="toggle-label toggle-right">
+                            <span>Continuous</span>
+                            <span>Play</span>
+                        </span>
+                    </div>
                 </div>
             </aside>
             <div class="canvas-wrapper">

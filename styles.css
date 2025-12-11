@@ -165,25 +165,26 @@ button:active {
     margin-top: 24px;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 16px;
-    padding: 12px 16px;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 12px 18px;
     background: #eef1f7;
     border-radius: 12px;
     border: 1px solid #d6dbea;
     width: 100%;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
 }
 
 .toggle-label {
     font-weight: 600;
-    font-size: 13px;
+    font-size: 12px;
     color: #454a55;
     letter-spacing: 0.02em;
     display: flex;
     flex-direction: column;
     gap: 2px;
     line-height: 1;
+    flex: 0 0 auto;
 }
 
 .toggle-label.toggle-left {
@@ -250,6 +251,7 @@ button:active {
 @media (max-width: 768px) {
     .playback-toggle {
         flex-direction: column;
+        flex-wrap: wrap;
         gap: 10px;
     }
 

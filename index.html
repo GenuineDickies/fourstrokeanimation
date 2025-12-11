@@ -16,16 +16,20 @@
                     <h3>Stroke Information:</h3>
                     <p id="strokeInfo">Air-fuel mixture enters through the intake valve as the piston moves down.</p>
                 </div>
+                <div class="playback-toggle" aria-label="Auto pause control">
+                    <span class="toggle-label">Auto Pause</span>
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="autoPauseToggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <span class="toggle-label">Continuous Play</span>
+                </div>
             </aside>
             <div class="canvas-wrapper">
                 <canvas id="engineCanvas" width="800" height="600"></canvas>
             </div>
         </div>
         <div class="controls">
-            <select id="autoPauseSelect">
-                <option value="on" selected>Auto-Pause On</option>
-                <option value="off">Auto-Pause Off</option>
-            </select>
             <button id="resumeBtn" style="display: none;">Resume</button>
             <button id="resetBtn">Reset</button>
             <div class="speed-control">

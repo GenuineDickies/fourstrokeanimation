@@ -1,7 +1,7 @@
 // Engine Animation Configuration
 const canvas = document.getElementById('engineCanvas');
 const ctx = canvas.getContext('2d');
-const autoPauseSelect = document.getElementById('autoPauseSelect');
+const autoPauseToggle = document.getElementById('autoPauseToggle');
 const resumeBtn = document.getElementById('resumeBtn');
 
 // Animation state
@@ -10,7 +10,7 @@ let isPlaying = true;
 let animationSpeed = 1;
 let time = 0;
 let lastPistonY = null;
-let autoPauseEnabled = autoPauseSelect ? autoPauseSelect.value === 'on' : true;
+let autoPauseEnabled = autoPauseToggle ? !autoPauseToggle.checked : true;
 let lastStrokeIndex = null;
 
 if (resumeBtn) {
@@ -1102,10 +1102,10 @@ function animate() {
 }
 
 // Event listeners
-if (autoPauseSelect) {
-    autoPauseSelect.addEventListener('change', () => {
-        autoPauseEnabled = autoPauseSelect.value === 'on';
-        if (!autoPauseEnabled && !isPlaying) {
+if (autoPauseToggle) {
+    autoPauseToggle.addEventListener('change', () => {
+        autoPauseEnabled = !autoPauseToggle.checked;
+        if (!autoPauseEnabled) {
             isPlaying = true;
         }
         if (resumeBtn) {
@@ -1126,8 +1126,8 @@ document.getElementById('resetBtn').addEventListener('click', () => {
     isPlaying = true;
     lastPistonY = null;
     lastStrokeIndex = null;
-    if (autoPauseSelect) {
-        autoPauseEnabled = autoPauseSelect.value === 'on';
+    if (autoPauseToggle) {
+        autoPauseEnabled = !autoPauseToggle.checked;
     }
     if (resumeBtn) {
         resumeBtn.style.display = 'none';
